@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "MedFlow Operations Suite"
+description = "A polished healthcare operations dashboard for hospital teams to monitor appointments, claims, pharmacy inventory, compliance signals, and workflow activity using synthetic demonstration data."
+version = "1.0.0"
+id = "artifacts/medflow-dashboard"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20388
+
+[services.development]
+run = "pnpm --filter @workspace/medflow-dashboard run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/medflow-dashboard", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/medflow-dashboard/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20388"
+BASE_PATH = "/"
