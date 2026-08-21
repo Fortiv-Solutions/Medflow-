@@ -5,17 +5,14 @@
   "type": "module",
   "scripts": {
     "build": "pnpm --filter @workspace/medflow-dashboard run build",
-    "start": "node index.js",
     "typecheck:libs": "tsc --build",
     "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./artifacts/**\" --filter \"./scripts\" --if-present run typecheck"
   },
   "private": true,
   "dependencies": {
-    "@replit/connectors-sdk": "^0.4.1",
-    "express": "^5.2.1"
+    "@replit/connectors-sdk": "^0.4.1"
   },
   "devDependencies": {
-    "@types/express": "^5.0.6",
     "@types/node": "catalog:",
     "prettier": "^3.9.6",
     "typescript": "~5.9.3"
