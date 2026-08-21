@@ -1,11 +1,4 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "pnpm --filter @workspace/medflow-dashboard run build",
-  "outputDirectory": "artifacts/medflow-dashboard/dist/public",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ]
+  "buildCommand": "pnpm --filter @workspace/medflow-dashboard run build"
 }

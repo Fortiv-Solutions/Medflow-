@@ -81,7 +81,16 @@ importers:
       '@replit/connectors-sdk':
         specifier: ^0.4.1
         version: 0.4.1
+      express:
+        specifier: ^5.2.1
+        version: 5.2.1
     devDependencies:
+      '@types/express':
+        specifier: ^5.0.6
+        version: 5.0.6
+      '@types/node':
+        specifier: 'catalog:'
+        version: 25.9.5
       prettier:
         specifier: ^3.9.6
         version: 3.9.6
